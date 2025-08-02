@@ -15,7 +15,7 @@ app.use(express.json());
 const bookingRouter = require("./create-booking");
 const stripeRouter  = require("./create-stripe-session");
 const confirmRouter = require("./send-confirmation");
-const icalRouter    = require("./ical-parser");
+const icalRouter = require("./ical-parser");
 
 app.use("/create-booking", bookingRouter);
 app.use("/create-stripe-session", stripeRouter);
