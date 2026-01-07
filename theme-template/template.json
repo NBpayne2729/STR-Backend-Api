@@ -1,0 +1,21 @@
+{
+  "name": "JRNP Rentals Theme",
+  "endpoints": {
+    "bookedDates": "/booked-dates",
+    "syncCalendar": "/sync-calendar",
+    "createBooking": "/create-booking",
+    "stripeSession": "/create-stripe-session",
+    "confirmation": "/send-confirmation"
+  },
+  "pages": {
+    "home": "/theme/index.html",
+    "availability": "/theme/availability.html",
+    "booking": "/theme/booking.html",
+    "confirmation": "/theme/confirmation.html",
+    "combined": "/theme/combined.html"
+  },
+  "theme": {
+    "primaryColor": "#1d4ed8",
+    "fontFamily": "Inter, system-ui, sans-serif"
+  }
+}

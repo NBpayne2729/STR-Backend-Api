@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JRNP Rentals · Confirmation</title>
+    <link rel="stylesheet" href="./theme.css" />
+  </head>
+  <body>
+    <header class="hero hero--compact">
+      <div class="hero__content">
+        <p class="hero__tag">JRNP Rentals</p>
+        <h1>Confirmation</h1>
+        <p class="hero__subtitle">
+          Share the confirmation message after a successful booking.
+        </p>
+        <nav class="hero__nav" aria-label="Theme pages">
+          <ul class="nav">
+            <li><a href="./index.html">Overview</a></li>
+            <li><a href="./availability.html">Availability</a></li>
+            <li><a href="./booking.html">Booking</a></li>
+            <li><a href="./confirmation.html" aria-current="page">Confirmation</a></li>
+            <li><a href="./combined.html">All-in-one</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="layout layout--single">
+      <section class="card">
+        <h2>Thanks for booking!</h2>
+        <p>
+          Your reservation is confirmed. A confirmation email will arrive shortly
+          with payment details and check-in instructions.
+        </p>
+        <p class="muted">
+          This page pairs with the <code>/send-confirmation</code> endpoint.
+        </p>
+        <button class="button" type="button" onclick="window.location.href='./booking.html'">
+          Make another booking
+        </button>
+      </section>
+    </main>
+  </body>
+</html>
