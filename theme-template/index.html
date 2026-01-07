@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JRNP Rentals · Booking Theme</title>
+    <link rel="stylesheet" href="./theme.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content">
+        <p class="hero__tag">JRNP Rentals</p>
+        <h1>Book your JRNP Rentals stay in minutes</h1>
+        <p class="hero__subtitle">
+          Sync availability, collect payment, and send confirmation from one
+          simple booking flow.
+        </p>
+        <p class="hero__subtitle">
+          Visit <strong>JRNPRENTALS.COM</strong> to see the live experience.
+        </p>
+        <nav class="hero__nav" aria-label="Theme pages">
+          <ul class="nav">
+            <li><a href="./index.html" aria-current="page">Overview</a></li>
+            <li><a href="./availability.html">Availability</a></li>
+            <li><a href="./booking.html">Booking</a></li>
+            <li><a href="./confirmation.html">Confirmation</a></li>
+            <li><a href="./combined.html">All-in-one</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="card">
+        <h2>Theme pages</h2>
+        <p class="muted">
+          Use the dedicated pages for each step of the booking flow.
+        </p>
+        <ul>
+          <li>Availability: <code>/theme/availability.html</code></li>
+          <li>Booking form: <code>/theme/booking.html</code></li>
+          <li>Confirmation: <code>/theme/confirmation.html</code></li>
+          <li>All-in-one copy: <code>/theme/combined.html</code></li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Endpoints</h2>
+        <p class="muted">
+          These API routes power the booking plugin and are reflected in the
+          JSON template.
+        </p>
+        <ul>
+          <li><code>GET /booked-dates</code> for availability</li>
+          <li><code>POST /sync-calendar</code> to ingest iCal data</li>
+          <li><code>POST /create-booking</code> to store reservations</li>
+          <li><code>POST /create-stripe-session</code> to begin payment</li>
+          <li><code>POST /send-confirmation</code> to notify guests</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Theme template</h2>
+        <p>
+          Use the JSON template below to wire the theme into any static site or
+          CMS. The booking plugin consumes these paths as-is.
+        </p>
+        <pre class="code" id="templateOutput"></pre>
+      </section>
+    </main>
+
+    <script src="./theme.js"></script>
+  </body>
+</html>

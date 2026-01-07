@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JRNP Rentals · Availability</title>
+    <link rel="stylesheet" href="./theme.css" />
+  </head>
+  <body>
+    <header class="hero hero--compact">
+      <div class="hero__content">
+        <p class="hero__tag">JRNP Rentals</p>
+        <h1>Availability</h1>
+        <p class="hero__subtitle">
+          Preview the booked dates feed that the plugin consumes.
+        </p>
+        <nav class="hero__nav" aria-label="Theme pages">
+          <ul class="nav">
+            <li><a href="./index.html">Overview</a></li>
+            <li><a href="./availability.html" aria-current="page">Availability</a></li>
+            <li><a href="./booking.html">Booking</a></li>
+            <li><a href="./confirmation.html">Confirmation</a></li>
+            <li><a href="./combined.html">All-in-one</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="layout layout--single">
+      <section class="card">
+        <h2>Booked dates</h2>
+        <p class="muted">
+          The booking plugin reads from the <code>/booked-dates</code> endpoint.
+        </p>
+        <div class="booked">
+          <button id="refreshBooked" class="button button--ghost" type="button">
+            Refresh booked dates
+          </button>
+          <ul id="bookedList" class="booked__list"></ul>
+        </div>
+      </section>
+    </main>
+
+    <script src="./theme.js"></script>
+  </body>
+</html>

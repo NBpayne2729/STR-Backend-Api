@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JRNP Rentals · All-in-one Theme</title>
+    <link rel="stylesheet" href="./theme.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content">
+        <p class="hero__tag">JRNP Rentals</p>
+        <h1>JRNP Rentals booking theme</h1>
+        <p class="hero__subtitle">
+          Copy this single page into your site if you want the entire booking flow
+          in one file.
+        </p>
+        <nav class="hero__nav" aria-label="Theme pages">
+          <ul class="nav">
+            <li><a href="./index.html">Overview</a></li>
+            <li><a href="./availability.html">Availability</a></li>
+            <li><a href="./booking.html">Booking</a></li>
+            <li><a href="./confirmation.html">Confirmation</a></li>
+            <li><a href="./combined.html" aria-current="page">All-in-one</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="layout layout--single">
+      <section class="card">
+        <h2>Booked dates</h2>
+        <p class="muted">
+          The booking plugin reads from the <code>/booked-dates</code> endpoint.
+        </p>
+        <div class="booked">
+          <button id="refreshBooked" class="button button--ghost" type="button">
+            Refresh booked dates
+          </button>
+          <ul id="bookedList" class="booked__list"></ul>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Start a booking</h2>
+        <form id="bookingForm" class="form">
+          <label>
+            Check-in
+            <input name="checkIn" type="date" required />
+          </label>
+          <label>
+            Check-out
+            <input name="checkOut" type="date" required />
+          </label>
+          <label>
+            Guest name
+            <input name="guestName" type="text" placeholder="Alex Rivera" required />
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" placeholder="alex@example.com" required />
+          </label>
+          <button class="button" type="submit">Book now</button>
+        </form>
+        <p id="bookingStatus" class="status" role="status"></p>
+      </section>
+
+      <section class="card">
+        <h2>Confirmation copy</h2>
+        <p>
+          Your reservation is confirmed. A confirmation email will arrive shortly
+          with payment details and check-in instructions.
+        </p>
+        <p class="muted">
+          This copy pairs with the <code>/send-confirmation</code> endpoint.
+        </p>
+        <button class="button" type="button" onclick="window.location.href='./booking.html'">
+          Make another booking
+        </button>
+      </section>
+
+      <section class="card">
+        <h2>Theme template</h2>
+        <p>
+          Use the JSON template below to wire the theme into any static site or
+          CMS. The booking plugin consumes these paths as-is.
+        </p>
+        <pre class="code" id="templateOutput"></pre>
+      </section>
+    </main>
+
+    <script src="./theme.js"></script>
+  </body>
+</html>

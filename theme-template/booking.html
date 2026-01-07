@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JRNP Rentals · Booking</title>
+    <link rel="stylesheet" href="./theme.css" />
+  </head>
+  <body>
+    <header class="hero hero--compact">
+      <div class="hero__content">
+        <p class="hero__tag">JRNP Rentals</p>
+        <h1>Booking</h1>
+        <p class="hero__subtitle">
+          Collect guest details and kick off the checkout flow.
+        </p>
+        <nav class="hero__nav" aria-label="Theme pages">
+          <ul class="nav">
+            <li><a href="./index.html">Overview</a></li>
+            <li><a href="./availability.html">Availability</a></li>
+            <li><a href="./booking.html" aria-current="page">Booking</a></li>
+            <li><a href="./confirmation.html">Confirmation</a></li>
+            <li><a href="./combined.html">All-in-one</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="layout layout--single">
+      <section class="card">
+        <h2>Start a booking</h2>
+        <form id="bookingForm" class="form">
+          <label>
+            Check-in
+            <input name="checkIn" type="date" required />
+          </label>
+          <label>
+            Check-out
+            <input name="checkOut" type="date" required />
+          </label>
+          <label>
+            Guest name
+            <input name="guestName" type="text" placeholder="Alex Rivera" required />
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" placeholder="alex@example.com" required />
+          </label>
+          <button class="button" type="submit">Book now</button>
+        </form>
+        <p id="bookingStatus" class="status" role="status"></p>
+      </section>
+    </main>
+
+    <script src="./theme.js"></script>
+  </body>
+</html>
