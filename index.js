@@ -7,11 +7,15 @@ const bookingRouter = require("./create-booking");
 const stripeRouter  = require("./create-stripe-session");
 const confirmRouter = require("./send-confirmation");
 const icalRouter    = require("./ical-parser");
+const mvpRouter     = require("./mvp-routes");
+const previewRouter = require("./preview");
 
 app.use("/create-booking",       bookingRouter);
 app.use("/create-stripe-session", stripeRouter);
 app.use("/send-confirmation",     confirmRouter);
 app.use("/sync-calendar",         icalRouter);
+app.use("/api",                    mvpRouter);
+app.use("/preview",                previewRouter);
 
 // health check
 app.get("/", (req, res) => res.send("API running"));
