@@ -9,6 +9,7 @@ const confirmRouter = require("./send-confirmation");
 const icalRouter    = require("./ical-parser");
 const mvpRouter     = require("./mvp-routes");
 const previewRouter = require("./preview");
+const sisterPackRouter = require("./sister-pack");
 
 app.use("/create-booking",       bookingRouter);
 app.use("/create-stripe-session", stripeRouter);
@@ -16,6 +17,7 @@ app.use("/send-confirmation",     confirmRouter);
 app.use("/sync-calendar",         icalRouter);
 app.use("/api",                    mvpRouter);
 app.use("/preview",                previewRouter);
+app.use("/sister-pack",            sisterPackRouter);
 
 // health check
 app.get("/", (req, res) => res.send("API running"));
